@@ -21,3 +21,22 @@ No special installation is required! Simply run the Python scrip
 ```c
 python cefe.py
 ```
+## Usage
+1️⃣ Run the script. 2️⃣ Select an option from the menu:
+<u1>
+<li>View Food Menu 🍽️</li>
+<li>Order Food 🛎️</li>
+<li>Exit 🚪 3️⃣ Place orders by entering item names. 4️⃣ View the final bill before exiting</li>
+</u1>
+
+## Food Menu
+```c
+food_menu = {
+    "Pizza": 100,
+    "Burger": 50,
+    "Coffee": 40,
+    "Fries": 60
+}
+```
+Each item has a price (₹) assigned, which is updated in the bill upon ordering.
+
