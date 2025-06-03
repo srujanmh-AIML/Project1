@@ -74,19 +74,24 @@ Would you like to order anything else? (yes/no): no
 🙏 Thank you for visiting CEFE! Have a great day! 🚀
 ```
 ## Enhancements & Possible Improvements
-✅ Feature Upgrades
+
+## ✅ Feature Upgrades
 <u1>
 <li>Add Discounts or Coupons for bulk orders.</li>
 <li>Introduce User Authentication to track customer preferences.</li>
 <li>Implement a Database System for dynamic menu changes.</li>
 <li>Enhance UI using graphical frameworks (like Tkinter for Python GUI).</li>
 </ul>
-✅ Code Optimization
+  
+## ✅ Code Optimization
+
 <ul>
 <li>The billing system could use a class-based approach for better encapsulation.</li>
 <li>Consider using exception handling (try-except blocks) to prevent input errors.</li>
 <li>Implement unit testing to validate menu updates and order processing.</li>
 </ul>
+
 ## Final Thoughts
+
 This Café Management System is a simple yet effective implementation of order processing. It offers a user-friendly experience with clear instructions and an interactive menu.
 
