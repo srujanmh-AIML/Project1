@@ -1,1 +1,79 @@
+## Food Menu Dictionary
+food_menu = {
+    "Pizza": 100,
+    "Burger": 50,
+    "Coffee": 40,
+    "Fries": 60
+}
 
+# Variable to store the total bill
+total_price = 0
+order_count = 0  # Track number of orders
+
+# Function to welcome the customer
+def welcome_customer():
+    print("\n🌟 Welcome to CEFE! 🌟")
+    print("Enjoy delicious food and a great experience.\n")
+
+# Function to display the food menu
+def show_menu():
+    print("\n🍽️ Food Menu:")
+    for item, price in food_menu.items():
+        print(f"{item}: ₹{price}")
+    print("\nSave food 🍲😊 \n")
+
+# Function to take the customer's order and update the bill
+def take_order():
+    global total_price, order_count
+
+    while True:
+        item = input("\nEnter the item name to order (or type 'done' to finish): ").capitalize()
+        if item.lower() == "done":
+            if order_count > 0:  # If at least one order was placed, show final bill
+                print(f"\n🛎️ Final Bill: ₹{total_price}")
+                print("\n🙏 Thank you for visiting CEFE! Have a great day! 🚀")
+            else:
+                print("\n📭 No items ordered.")
+            break
+        elif item in food_menu:
+            total_price += food_menu[item]
+            order_count += 1
+            if order_count == 1:
+                print(f"✅ {item} added to your order! Current bill: ₹{total_price}")
+            else:
+                print(f"✅ {item} added! Updated bill: ₹{total_price}")
+
+            # Ask the customer if they want to order anything else
+            more_order = input("\nWould you like to order anything else? (yes/no): ").lower()
+            if more_order == "yes":
+                show_menu()  # Show menu again for more orders
+            else:
+                print(f"\n🛎️ Final Bill: ₹{total_price}")
+                print("\n🙏 Thank you for visiting CEFE! Have a great day! 🚀")
+                break
+        else:
+            print("\n❌ Please order something that we can serve from the menu!")
+
+# Menu system
+def cefe_menu():
+    while True:
+        print("\n🌟 CEFE Management Menu:")
+        print("1️⃣ View Food Menu")
+        print("2️⃣ Order Food")
+        print("3️⃣ Exit")
+
+        choice = input("\nEnter your choice: ")
+
+        if choice == "1":
+            show_menu()
+        elif choice == "2":
+            take_order()
+        elif choice == "3":
+            print("\n🚪 Thank you for visiting CEFE! Come again soon.\n")
+            break
+        else:
+            print("\n❌ Please order something that we can serve from the menu!")
+
+# Run the system
+welcome_customer()
+cefe_menu()
