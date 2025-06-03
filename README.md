@@ -10,11 +10,14 @@ Welcome to CAFE, a simple and interactive <b> Café Management System </b> built
   
 <li>Installation</li>
 <li>Usage</li>
-<li>ood Menu</li>
+<li>Add Menu</li>
 <li>Functions</li>
 <li>Example Run</li>
 <li>icense</li>
 </u1>
 
-Installation
+## Installation
 No special installation is required! Simply run the Python scrip
+```c
+python cefe.py
+```
